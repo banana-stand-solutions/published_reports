@@ -1,0 +1,2789 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Competitor Overview - Svea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        img {
+            display: block;
+            margin: 40px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        table td, table th {
+            padding: 8px;
+            text-align: center;
+        }
+        table th:nth-child(n+2), table td:nth-child(n+2) {
+            width: 150px;
+        }
+
+        /* Tabs */
+        .tab {
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab button {
+            background-color: #f1f1f1;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px 0;
+        }
+        .tabcontent.active {
+            display: block;
+        }
+    </style>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+
+    <h1>Competitor Overview - Svea</h1>
+    <div style="text-align: right; color: #555; font-size: 0.9em;">
+        Updated: 2025-10-30
+    </div>
+    
+    <!-- Tab buttons -->
+    <div class="tab">
+        
+            <button class="tablinks" onclick="openTab(event, 'SWE')" id="defaultOpen">SWE</button>
+        
+            <button class="tablinks" onclick="openTab(event, 'NOR')" id="">NOR</button>
+        
+    </div>
+
+    <!-- Tab content -->
+    
+    <div id="SWE" class="tabcontent">
+        <div class="section">
+
+            <h2>Interest Rates Across Banks</h2>
+            <img src="scatter_plot_swe.png" alt="Scatter Plot for SWE">
+        
+            <h2>Historical Rates Grid</h2>
+            <img src="hist_charts_swe.png" alt="Grid Plot for SWE">
+        </div>
+
+        <div class="section">
+            <h2>Rates by  banks</h2>
+            <table id="summary-table-comp" class="dataframe table datatable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>tenor_months</th>
+      <th>0</th>
+      <th>0 max</th>
+      <th>3</th>
+      <th>6</th>
+      <th>9</th>
+      <th>12</th>
+      <th>24</th>
+      <th>36</th>
+      <th>48</th>
+      <th>60</th>
+      <th>84</th>
+    </tr>
+    <tr>
+      <th>ProviderName_date0</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Coeli</th>
+      <td>2.50</td>
+      <td>-</td>
+      <td>2.90</td>
+      <td>2.85</td>
+      <td>-</td>
+      <td>2.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Multitude Bank</th>
+      <td>2.50</td>
+      <td>-</td>
+      <td>2.65</td>
+      <td>2.70</td>
+      <td>-</td>
+      <td>2.75</td>
+      <td>2.80</td>
+      <td>2.85</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Mangold</th>
+      <td>2.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Serafim Finans</th>
+      <td>2.50</td>
+      <td>-</td>
+      <td>2.80</td>
+      <td>2.70</td>
+      <td>-</td>
+      <td>2.70</td>
+      <td>-</td>
+      <td>2.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Fedelta</th>
+      <td>2.45</td>
+      <td>-</td>
+      <td>2.65</td>
+      <td>2.65</td>
+      <td>-</td>
+      <td>2.70</td>
+      <td>2.70</td>
+      <td>3.00</td>
+      <td>2.90</td>
+      <td>2.85</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Borgo</th>
+      <td>2.45</td>
+      <td>-</td>
+      <td>2.00</td>
+      <td>2.00</td>
+      <td>-</td>
+      <td>2.40</td>
+      <td>2.20</td>
+      <td>2.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Morrow Bank</th>
+      <td>2.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Qred</th>
+      <td>2.40</td>
+      <td>-</td>
+      <td>2.70</td>
+      <td>2.00</td>
+      <td>2.00</td>
+      <td>2.00</td>
+      <td>1.80</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Plus 1</th>
+      <td>2.40</td>
+      <td>2.50</td>
+      <td>2.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2.80</td>
+      <td>2.60</td>
+      <td>2.60</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Lea Bank AB</th>
+      <td>2.40</td>
+      <td>2.60</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Collector sparkonto</th>
+      <td>2.40</td>
+      <td>2.50</td>
+      <td>2.65</td>
+      <td>2.65</td>
+      <td>-</td>
+      <td>2.70</td>
+      <td>2.75</td>
+      <td>2.75</td>
+      <td>2.80</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>EP Bank</th>
+      <td>2.30</td>
+      <td>-</td>
+      <td>2.80</td>
+      <td>2.60</td>
+      <td>-</td>
+      <td>2.50</td>
+      <td>2.25</td>
+      <td>1.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bankaktiebolaget Nordiska</th>
+      <td>2.30</td>
+      <td>-</td>
+      <td>2.90</td>
+      <td>2.80</td>
+      <td>-</td>
+      <td>2.70 (-0.10)</td>
+      <td>2.70</td>
+      <td>2.75</td>
+      <td>2.80</td>
+      <td>2.85</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Northmill Bank</th>
+      <td>2.20</td>
+      <td>-</td>
+      <td>2.70</td>
+      <td>2.75</td>
+      <td>-</td>
+      <td>2.75</td>
+      <td>2.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Qliro</th>
+      <td>2.15</td>
+      <td>-</td>
+      <td>2.40</td>
+      <td>2.40</td>
+      <td>-</td>
+      <td>2.55</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Resurs Bank</th>
+      <td>2.15</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2.70</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Moank</th>
+      <td>2.05</td>
+      <td>2.10</td>
+      <td>2.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Aros Kapital</th>
+      <td>2.00</td>
+      <td>-</td>
+      <td>2.30</td>
+      <td>2.40</td>
+      <td>-</td>
+      <td>2.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Froda</th>
+      <td>2.00</td>
+      <td>-</td>
+      <td>2.90</td>
+      <td>2.70</td>
+      <td>-</td>
+      <td>2.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Avida Finans</th>
+      <td>2.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Svea Bank</th>
+      <td>1.80</td>
+      <td>-</td>
+      <td>2.30</td>
+      <td>2.40</td>
+      <td>-</td>
+      <td>2.50</td>
+      <td>2.35</td>
+      <td>2.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>PRA Spar</th>
+      <td>1.80</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Marginalen</th>
+      <td>1.75</td>
+      <td>-</td>
+      <td>2.35 (-0.15)</td>
+      <td>2.45 (-0.15)</td>
+      <td>-</td>
+      <td>2.60 (-0.10)</td>
+      <td>2.70 (-0.05)</td>
+      <td>2.75 (-0.05)</td>
+      <td>-</td>
+      <td>2.80</td>
+      <td>2.80</td>
+    </tr>
+    <tr>
+      <th>Lunar</th>
+      <td>1.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bank Norwegian</th>
+      <td>1.75</td>
+      <td>2.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Lantmännen Finans</th>
+      <td>1.70</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Landshypotek Bank</th>
+      <td>1.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>JAK Medlemsbank</th>
+      <td>1.50</td>
+      <td>-</td>
+      <td>2.75</td>
+      <td>1.70</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Klarna</th>
+      <td>1.45</td>
+      <td>-</td>
+      <td>1.80</td>
+      <td>1.93</td>
+      <td>2.00</td>
+      <td>2.20</td>
+      <td>2.38</td>
+      <td>2.53</td>
+      <td>2.61</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Ekobanken</th>
+      <td>1.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.15</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.05</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nordnet</th>
+      <td>1.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Avanza Bank</th>
+      <td>1.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Ikano Bank</th>
+      <td>1.25</td>
+      <td>1.55</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2.20</td>
+      <td>2.10</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2.35</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Carnegie</th>
+      <td>1.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SBAB Bank</th>
+      <td>1.25</td>
+      <td>-</td>
+      <td>2.15</td>
+      <td>2.15</td>
+      <td>-</td>
+      <td>2.10</td>
+      <td>2.10</td>
+      <td>2.20</td>
+      <td>2.30</td>
+      <td>2.50</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bluestep Bank</th>
+      <td>0.45</td>
+      <td>2.40</td>
+      <td>2.90</td>
+      <td>2.70</td>
+      <td>-</td>
+      <td>2.50</td>
+      <td>2.30</td>
+      <td>2.20</td>
+      <td>-</td>
+      <td>2.10</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>ICA Banken</th>
+      <td>0.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nordax Bank</th>
+      <td>0.35</td>
+      <td>2.55</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2.30</td>
+      <td>2.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>TF Bank</th>
+      <td>0.25</td>
+      <td>2.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Skandia</th>
+      <td>0.20</td>
+      <td>0.40</td>
+      <td>2.10</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.95</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Danske Bank</th>
+      <td>0.05</td>
+      <td>1.30</td>
+      <td>1.60</td>
+      <td>1.65</td>
+      <td>-</td>
+      <td>1.90</td>
+      <td>2.00</td>
+      <td>2.15</td>
+      <td>-</td>
+      <td>2.50</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Brocc Finance</th>
+      <td>0.05</td>
+      <td>-</td>
+      <td>2.90</td>
+      <td>2.90</td>
+      <td>-</td>
+      <td>2.90</td>
+      <td>2.90</td>
+      <td>2.95</td>
+      <td>2.95</td>
+      <td>2.95</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Handelsbanken</th>
+      <td>0.05</td>
+      <td>2.15</td>
+      <td>1.60</td>
+      <td>1.60</td>
+      <td>-</td>
+      <td>1.65</td>
+      <td>1.70</td>
+      <td>1.86</td>
+      <td>-</td>
+      <td>2.13 (+0.01)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nordea</th>
+      <td>0.00</td>
+      <td>0.10</td>
+      <td>1.60</td>
+      <td>1.65</td>
+      <td>-</td>
+      <td>1.60</td>
+      <td>1.60</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SEB</th>
+      <td>0.00</td>
+      <td>0.10</td>
+      <td>1.60</td>
+      <td>1.60</td>
+      <td>-</td>
+      <td>1.50</td>
+      <td>1.50</td>
+      <td>1.60</td>
+      <td>1.70</td>
+      <td>1.80</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Swedbank</th>
+      <td>0.00</td>
+      <td>0.10</td>
+      <td>1.60</td>
+      <td>1.55</td>
+      <td>-</td>
+      <td>1.50</td>
+      <td>1.52</td>
+      <td>1.62</td>
+      <td>1.71</td>
+      <td>1.50</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>HoistSpar</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.95</td>
+      <td>3.00</td>
+      <td>-</td>
+      <td>3.00</td>
+      <td>2.95</td>
+      <td>2.95</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+
+        <div class="section">
+            
+                <h2>Rate changes since last update</h2>
+            
+            <table id="all-table-comp" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>tenor_months</th>
+      <th>0</th>
+      <th>0 max</th>
+      <th>3</th>
+      <th>6</th>
+      <th>9</th>
+      <th>12</th>
+      <th>24</th>
+      <th>36</th>
+      <th>48</th>
+      <th>60</th>
+      <th>84</th>
+    </tr>
+    <tr>
+      <th>ProviderName_date0</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bankaktiebolaget Nordiska</th>
+      <td>2.30</td>
+      <td>-</td>
+      <td>2.90</td>
+      <td>2.80</td>
+      <td>-</td>
+      <td>2.70 (-0.10)</td>
+      <td>2.70</td>
+      <td>2.75</td>
+      <td>2.80</td>
+      <td>2.85</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Marginalen</th>
+      <td>1.75</td>
+      <td>-</td>
+      <td>2.35 (-0.15)</td>
+      <td>2.45 (-0.15)</td>
+      <td>-</td>
+      <td>2.60 (-0.10)</td>
+      <td>2.70 (-0.05)</td>
+      <td>2.75 (-0.05)</td>
+      <td>-</td>
+      <td>2.80</td>
+      <td>2.80</td>
+    </tr>
+    <tr>
+      <th>Handelsbanken</th>
+      <td>0.05</td>
+      <td>2.15</td>
+      <td>1.60</td>
+      <td>1.60</td>
+      <td>-</td>
+      <td>1.65</td>
+      <td>1.70</td>
+      <td>1.86</td>
+      <td>-</td>
+      <td>2.13 (+0.01)</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+
+<!-- Removed Rank content used to be here -->
+
+
+
+
+    </div>
+    
+    <div id="NOR" class="tabcontent">
+        <div class="section">
+
+            <h2>Interest Rates Across Banks</h2>
+            <img src="scatter_plot_nok.png" alt="Scatter Plot for NOR">
+        
+            <h2>Historical Rates Grid</h2>
+            <img src="hist_charts_nok.png" alt="Grid Plot for NOR">
+        </div>
+
+        <div class="section">
+            <h2>Rates by  banks</h2>
+            <table id="summary-table-comp" class="dataframe table datatable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>tenor_date0</th>
+      <th>Pension</th>
+      <th>BSU</th>
+      <th>0.0</th>
+      <th>0*</th>
+      <th>3.0</th>
+      <th>6.0</th>
+      <th>9.0</th>
+      <th>12.0</th>
+      <th>24.0</th>
+      <th>36.0</th>
+      <th>48.0</th>
+      <th>60.0</th>
+    </tr>
+    <tr>
+      <th>banksparing.leverandorVisningsnavn_date0</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>SpareBank 1 Hallingdal Valdres</th>
+      <td>4.20</td>
+      <td>-</td>
+      <td>2.05</td>
+      <td>4.21</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Sør-Norge</th>
+      <td>3.20</td>
+      <td>6.30</td>
+      <td>2.50</td>
+      <td>3.25</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Grue Sparebank</th>
+      <td>3.00</td>
+      <td>0.05</td>
+      <td>1.25</td>
+      <td>3.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Helgeland</th>
+      <td>2.65</td>
+      <td>0.95</td>
+      <td>1.05</td>
+      <td>2.65</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.50</td>
+      <td>3.70</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Ringerike Hadeland</th>
+      <td>2.60</td>
+      <td>-</td>
+      <td>0.40</td>
+      <td>2.60</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Haugesund Sparebank</th>
+      <td>2.50</td>
+      <td>-</td>
+      <td>2.35</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>4.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Luster Sparebank</th>
+      <td>2.45</td>
+      <td>2.75</td>
+      <td>2.45</td>
+      <td>2.75</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Lom og Skjåk</th>
+      <td>1.55</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Aasen Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.10</td>
+      <td>2.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Agder Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.00</td>
+      <td>3.50</td>
+      <td>4.65</td>
+      <td>4.50</td>
+      <td>4.45</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Aprila Bank ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.82</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Askim og Spydeberg Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Aurskog Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>1.15</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Avida Finans AB NUF</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.95</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>BN Bank ASA</th>
+      <td>-</td>
+      <td>5.80</td>
+      <td>1.60</td>
+      <td>4.20</td>
+      <td>4.50</td>
+      <td>4.55</td>
+      <td>4.60</td>
+      <td>4.60</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bank Norwegian, en filial av NOBA Bank Group AB (publ)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.75</td>
+      <td>4.60</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bank2, en del av Enity Bank Group AB (publ) NUF</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.32</td>
+      <td>4.55</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Barespar.no (BN Bank ASA)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.60</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Berg Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.00</td>
+      <td>3.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bien Sparebank ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.10</td>
+      <td>4.20</td>
+      <td>-</td>
+      <td>4.55</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Birkenes Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>3.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bjugn Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2.60</td>
+      <td>-</td>
+      <td>2.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Bluestep Bank, en del av Enity Bank Group AB (publ) NUF</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.80</td>
+      <td>-</td>
+      <td>4.97</td>
+      <td>4.91</td>
+      <td>-</td>
+      <td>4.81</td>
+      <td>4.21</td>
+      <td>4.01</td>
+      <td>-</td>
+      <td>2.50</td>
+    </tr>
+    <tr>
+      <th>Bulder (Sparebanken Norge)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.16</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Collector (Norion Bank AB)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.86</td>
+      <td>-</td>
+      <td>4.70</td>
+      <td>4.70</td>
+      <td>-</td>
+      <td>4.80</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Cultura Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1.65</td>
+      <td>2.45</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>DNB Bank ASA</th>
+      <td>-</td>
+      <td>2.25</td>
+      <td>2.25</td>
+      <td>2.25</td>
+      <td>4.40</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>4.30</td>
+      <td>3.70</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>DinBANK.no(Sparebanken Øst)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Drangedal Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.10</td>
+      <td>3.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Etnedal Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.40</td>
+      <td>2.65</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Evje og Hornnes Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3.65</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Fana Sparebank</th>
+      <td>-</td>
+      <td>2.00</td>
+      <td>4.50</td>
+      <td>2.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Flekkefjord Sparebank</th>
+      <td>-</td>
+      <td>3.25</td>
+      <td>0.00</td>
+      <td>3.50</td>
+      <td>-</td>
+      <td>4.50</td>
+      <td>-</td>
+      <td>4.45</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Gildeskål Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>1.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Grong Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.75</td>
+      <td>0.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.45</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Haltdalen Sparebank</th>
+      <td>-</td>
+      <td>3.25</td>
+      <td>0.00</td>
+      <td>0.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Handelsbanken AB NUF</th>
+      <td>-</td>
+      <td>2.40</td>
+      <td>3.00</td>
+      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Hegra Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.75</td>
+      <td>2.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Himla Banktjenester (Fana Sparebank)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Høland og Setskog Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>INSTABANK ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.41</td>
+      <td>4.65</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>JBF Bank og Forsikring</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>3.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Jæren Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>KLP Banken AS</th>
+      <td>-</td>
+      <td>3.20</td>
+      <td>3.20</td>
+      <td>4.05</td>
+      <td>-</td>
+      <td>4.55</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Kraft Bank ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.59</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Kredittbanken ASA - Del av SpareBank 1 og Eika</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.89</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Kvinesdal Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>3.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Landkreditt Bank AS</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.10</td>
+      <td>3.65</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Lea Bank AB (publ) NUF</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.23</td>
+      <td>4.17</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Lillesands Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.95</td>
+      <td>3.65</td>
+      <td>-</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Lunar (Lunar Bank A/S)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Maritime &amp; Merchant Bank ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Marker &amp; Eidsberg Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.80</td>
+      <td>3.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Melhusbanken</th>
+      <td>-</td>
+      <td>2.60</td>
+      <td>2.60</td>
+      <td>2.50</td>
+      <td>4.65</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Morrow Bank ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.41</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>NORDEA BANK ABP, FILIAL I NORGE</th>
+      <td>-</td>
+      <td>3.50</td>
+      <td>3.50</td>
+      <td>3.75</td>
+      <td>4.55</td>
+      <td>4.60</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>NORDirekte (Skagerrak Sparebank)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.15</td>
+      <td>1.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nidaros Sparebank</th>
+      <td>-</td>
+      <td>1.75</td>
+      <td>1.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nordax Bank, en del av NOBA Bank Group AB (publ)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.70</td>
+      <td>4.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.70</td>
+      <td>4.15</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nordic Corporate Bank ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nordnet Bank (Nordnet Bank AB)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Nybygger.no (Sparebanken Øst)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.10</td>
+      <td>0.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Næringsbanken ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>OBOS-banken AS</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Odal Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.25</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Oppdalsbanken</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1.25</td>
+      <td>2.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Orkla Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1.95</td>
+      <td>0.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Oslofjord Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.20</td>
+      <td>2.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Pareto Bank ASA</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Penni fra Eika digitalbank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.10</td>
+      <td>4.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Rindal Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.25</td>
+      <td>0.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Rogaland Sparebank</th>
+      <td>-</td>
+      <td>2.60</td>
+      <td>2.60</td>
+      <td>4.05</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Romerike Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.70</td>
+      <td>4.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Rørosbanken Røros Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>3.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Santander Consumer Bank AS</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.31</td>
+      <td>4.41</td>
+      <td>-</td>
+      <td>4.51</td>
+      <td>-</td>
+      <td>4.12</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sbanken (DNB Bank ASA)</th>
+      <td>-</td>
+      <td>2.25</td>
+      <td>3.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Selbu Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>2.45</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Skagerrak Sparebank</th>
+      <td>-</td>
+      <td>3.10</td>
+      <td>2.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Skandinaviska Enskilda Banken AB (Publ.) Oslofilialen</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Skudenes &amp; Aakra Sparebank</th>
+      <td>-</td>
+      <td>6.20</td>
+      <td>2.25</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Skue Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.90</td>
+      <td>3.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sogn Sparebank</th>
+      <td>-</td>
+      <td>3.05</td>
+      <td>2.80</td>
+      <td>4.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Soknedal Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>3.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Gudbrandsdal</th>
+      <td>-</td>
+      <td>2.50</td>
+      <td>3.15</td>
+      <td>3.50</td>
+      <td>-</td>
+      <td>4.50</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Nord-Norge</th>
+      <td>-</td>
+      <td>2.35</td>
+      <td>0.05</td>
+      <td>2.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Nordmøre</th>
+      <td>-</td>
+      <td>2.70</td>
+      <td>0.50</td>
+      <td>2.35</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 SMN</th>
+      <td>-</td>
+      <td>6.00</td>
+      <td>2.00</td>
+      <td>0.50</td>
+      <td>-</td>
+      <td>4.30</td>
+      <td>-</td>
+      <td>3.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Sogn og Fjordane</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.20</td>
+      <td>2.60</td>
+      <td>-</td>
+      <td>4.35</td>
+      <td>-</td>
+      <td>4.05</td>
+      <td>3.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Østfold Akershus</th>
+      <td>-</td>
+      <td>3.15</td>
+      <td>3.20</td>
+      <td>3.80</td>
+      <td>-</td>
+      <td>4.55</td>
+      <td>-</td>
+      <td>4.45</td>
+      <td>4.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>SpareBank 1 Østlandet</th>
+      <td>-</td>
+      <td>3.25</td>
+      <td>1.15</td>
+      <td>3.15</td>
+      <td>-</td>
+      <td>4.50</td>
+      <td>-</td>
+      <td>4.20</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sparebank 68° Nord</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>2.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sparebanken DIN Telemark</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>3.10</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sparebanken Møre</th>
+      <td>-</td>
+      <td>4.15</td>
+      <td>1.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>4.00</td>
+      <td>3.90</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sparebanken Narvik</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.15</td>
+      <td>3.55</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>4.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sparebanken Norge</th>
+      <td>-</td>
+      <td>2.25</td>
+      <td>2.25</td>
+      <td>2.25</td>
+      <td>4.35</td>
+      <td>4.30</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Sparebanken Øst</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.00</td>
+      <td>4.75</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Spareskillingsbanken</th>
+      <td>-</td>
+      <td>2.00</td>
+      <td>0.00</td>
+      <td>3.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Stadsbygd Sparebank</th>
+      <td>-</td>
+      <td>1.50</td>
+      <td>1.00</td>
+      <td>0.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Storebrand Bank ASA</th>
+      <td>-</td>
+      <td>2.80</td>
+      <td>0.00</td>
+      <td>3.75</td>
+      <td>4.70</td>
+      <td>4.50</td>
+      <td>-</td>
+      <td>4.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Strømmen Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.40</td>
+      <td>4.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Svea Bank AB, Filial i Norge</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.65</td>
+      <td>-</td>
+      <td>4.85</td>
+      <td>4.70</td>
+      <td>-</td>
+      <td>4.52</td>
+      <td>4.15</td>
+      <td>4.00</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Søgne og Greipstad Sparebank</th>
+      <td>-</td>
+      <td>2.90</td>
+      <td>2.90</td>
+      <td>3.70</td>
+      <td>4.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>TF Bank Norge NUF</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.73</td>
+      <td>-</td>
+      <td>4.70</td>
+      <td>3.55</td>
+      <td>-</td>
+      <td>2.50</td>
+      <td>-</td>
+      <td>2.10</td>
+      <td>2.30</td>
+      <td>2.50</td>
+    </tr>
+    <tr>
+      <th>Tinde Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.25</td>
+      <td>1.95</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Tinn Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.25</td>
+      <td>3.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Tolga-Os Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.60</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Topprente.no (Sparebanken Øst)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.45</td>
+      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Trøgstad Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Trøndelag Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.10</td>
+      <td>3.00</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Valdres Sparebank</th>
+      <td>-</td>
+      <td>2.35</td>
+      <td>0.30</td>
+      <td>4.70</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Valle Sparebank</th>
+      <td>-</td>
+      <td>3.20</td>
+      <td>0.20</td>
+      <td>2.90</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Vekselbanken</th>
+      <td>-</td>
+      <td>3.25</td>
+      <td>3.25</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Voss Sparebank</th>
+      <td>-</td>
+      <td>6.35</td>
+      <td>2.60</td>
+      <td>3.55</td>
+      <td>-</td>
+      <td>4.65</td>
+      <td>-</td>
+      <td>4.45</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>sparesmart.no (Eika digitalbank AS)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>4.40</td>
+      <td>4.65</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>yA Bank AS (Resurs Bank AB)</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3.05</td>
+      <td>3.35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Ørland Sparebank</th>
+      <td>-</td>
+      <td>2.05</td>
+      <td>2.05</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Ørskog Sparebank</th>
+      <td>-</td>
+      <td>-</td>
+      <td>0.05</td>
+      <td>2.45</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4.50</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+
+        <div class="section">
+            
+                <h2>Rate changes since last update</h2>
+            
+            <table id="all-table-comp" class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>tenor_date0</th>
+      <th>Pension</th>
+      <th>BSU</th>
+      <th>0.0</th>
+      <th>0*</th>
+      <th>3.0</th>
+      <th>6.0</th>
+      <th>9.0</th>
+      <th>12.0</th>
+      <th>24.0</th>
+      <th>36.0</th>
+      <th>48.0</th>
+      <th>60.0</th>
+    </tr>
+    <tr>
+      <th>banksparing.leverandorVisningsnavn_date0</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+        </div>
+
+<!-- Removed Rank content used to be here -->
+
+
+
+
+    </div>
+    
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("defaultOpen").click();
+
+            // Initialize all tables with DataTables
+            $('table.datatable').each(function() {
+                if (!$.fn.DataTable.isDataTable(this)) {
+                    // Check for a specific table by ID or other attribute
+                    if ($(this).attr('id') === 'summary-table-comp') {
+                        $(this).DataTable({
+                            order: [[2, 'desc']],  // Custom sort for this table (e.g., 3rd column ascending)
+                            autoWidth: false  // ← disables automatic column sizing
+                        });
+                    } else {
+                        $(this).DataTable({
+                            order: [[2, 'desc']],  // Default sort for others
+                            autoWidth: false  // ← disables automatic column sizing
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
